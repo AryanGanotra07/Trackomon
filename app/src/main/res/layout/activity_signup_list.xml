@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="7dp"
+    tools:context=".SignupList">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trackomon"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"/>
+
+
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+
+    <ImageView
+        android:layout_width="380dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="30dp"
+
+
+        android:src="@drawable/trackamon" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="195dp"
+            android:layout_height="54dp"
+            android:src="@drawable/spendit" />
+
+        <ImageView
+            android:layout_width="195dp"
+            android:layout_height="56dp"
+            android:src="@drawable/recordit"
+            />
+
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_marginTop="90dp">
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="  Email/Password"
+        android:textSize="15sp"
+        android:drawableLeft="@drawable/email"
+        android:background="@drawable/button"
+        android:id="@+id/emailButton"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="  Sign In"
+        android:textSize="15sp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/google"
+        android:background="@drawable/button"
+        android:id="@+id/googleButton"
+        />
+
+    <Button
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:text="  Phone Number"
+        android:layout_marginTop="10dp"
+    android:textSize="15sp"
+    android:drawableLeft="@drawable/phone"
+    android:background="@drawable/button"
+        android:onClick="onClick"
+        android:id="@+id/phonenumberButton"
+    />
+
+
+
+</LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</RelativeLayout>

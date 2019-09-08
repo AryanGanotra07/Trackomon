@@ -1,41 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    tools:context=".EmailPassword"
+    android:padding="7dp"
+    android:id="@+id/relativeLayout"
+    android:onClick="onClick"
+    >
     <android.support.v7.widget.Toolbar
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="4dp"
-        >
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:src="@drawable/logo"
-            /> 
-        <TextView
-            android:layout_width="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Trackomon"
-            android:textSize="20sp"
-            android:layout_marginLeft="20dp"
-            android:textStyle="bold"
-            android:textColor="@color/grey"/>
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trackomon"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"/>
+
+
+
+
+
+        </LinearLayout>
+
     </android.support.v7.widget.Toolbar>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/my_toolbar"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:weightSum="3">
 
-    </RelativeLayout>
+
+        <ImageView
+            android:layout_width="380dp"
+            android:layout_height="53dp"
+            android:layout_marginTop="30dp"
+            android:id="@+id/trackomon"
+            android:onClick="onClick"
+
+
+            android:src="@drawable/trackamon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="195dp"
+                android:layout_height="54dp"
+                android:src="@drawable/spendit"
+                android:id="@+id/spendit"
+                android:onClick="onClick"/>
+
+            <ImageView
+                android:layout_width="195dp"
+                android:layout_height="56dp"
+                android:src="@drawable/recordit"
+                android:id="@+id/recordit"
+                android:onClick="onClick"
+                />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:textSize="25sp"
+                android:id="@+id/loginText"
+                android:textColor="@color/loginText"
+                android:onClick="onClick"
+                />
+
+                <EditText
+                    android:id="@+id/emailEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/loginText"
+                    android:layout_marginTop="10dp"
+                    android:hint="Email Address"
+                    android:inputType="textEmailAddress" />
+
+                <EditText
+                    android:id="@+id/passwordEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:inputType="textPassword" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="Login"
+                    android:textSize="15sp"
+                    android:background="@drawable/button"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"
+                    android:onClick="onClick"
+                    android:id="@+id/loginButton"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp">
+
+
+                    <TextView
+                        android:id="@+id/createAccount"
+                        android:layout_width="202dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="left"
+                        android:text="Create Account"
+                        android:textColor="@color/grey"
+                        android:textColorHighlight="@color/grey"
+                        android:textSize="22sp"
+                        android:onClick="onClick"/>
+
+                    <TextView
+                        android:id="@+id/forgotPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:gravity="right"
+                        android:text="Forgot Password"
+                        android:textColor="@color/grey"
+                        android:textColorHighlight="@color/grey"
+                        android:textSize="22sp"
+                        android:onClick="onClick"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </LinearLayout>
 
 
 
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>

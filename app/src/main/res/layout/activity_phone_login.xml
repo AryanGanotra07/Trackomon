@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="7dp"
+    tools:context=".PhoneLogin">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trackomon"
+                android:textColor="@color/grey"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"/>
+
+
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <EditText
+        android:id="@+id/otpedittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:hint="OTP"
+        android:inputType="number"
+        android:textColor="@color/colorPrimaryDark"
+        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend OTP"
+        android:background="@drawable/button"
+        android:layout_alignLeft="@+id/otpedittext"
+        android:visibility="gone"
+        android:layout_below="@id/otpedittext"
+        android:layout_margin="10dp"
+        android:onClick="onClick"
+        android:id="@+id/resendotpbutton"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Submit"
+        android:onClick="onClick"
+        android:background="@drawable/button"
+        android:layout_below="@id/otpedittext"
+        android:layout_alignRight="@id/otpedittext"
+        android:layout_margin="10dp"
+        android:id="@+id/submitotpbutton"
+        android:visibility="gone"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:id="@+id/ll"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone Number"
+            android:textSize="20sp"
+            android:layout_marginTop="@dimen/fastscroll__handle_height"
+            android:id="@+id/phoneNumberText"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/phoneNumberText"
+            android:layout_marginTop="20dp"
+
+
+            >
+
+            <com.hbb20.CountryCodePicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cpp"
+                app:ccp_autoDetectCountry="true"
+                android:onClick="onCountryPickerClick"
+
+                >
+
+
+            </com.hbb20.CountryCodePicker>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/phoneedittext"
+                android:hint="Phone "
+                android:inputType="phone"
+                android:singleLine="true"
+                />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Send OTP"
+          android:background="@drawable/button"
+            android:layout_marginTop="20dp"
+            android:id="@+id/sendotpbutton"
+            android:onClick="onClick"
+
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

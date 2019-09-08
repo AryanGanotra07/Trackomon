@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.codingee.trackamon">
 
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,15 +11,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".SplashActivitu" android:theme="@style/SplashScreen">
+        <activity
+            android:name=".SplashActivitu"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
-
+        <activity
+            android:name=".EmailPassword"
+            android:screenOrientation="portrait" />
+        <activity android:name=".onboardfragment" />
+        <activity
+            android:name=".SignupList"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".EmailVerification" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".PhoneLogin" />
+        <activity android:name=".FingerprintAuth" />
+        <activity android:name=".PasswordAuth"></activity>
     </application>
 
 </manifest>

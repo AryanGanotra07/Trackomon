@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fragmentback">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/dotslayout">
+
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/dotslayout"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ></LinearLayout>
+
+    <Button
+        android:id="@+id/nextb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/viewpager"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+
+        android:onClick="onClick"
+
+        android:background="@android:color/transparent"
+        android:fontFamily="@string/common_google_play_services_notification_ticker"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text="Next"
+        android:textColor="@color/grey"
+        android:textSize="20sp"
+        android:visibility="gone" />
+</RelativeLayout>
